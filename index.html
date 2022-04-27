@@ -62,7 +62,7 @@
           <h1 class="hero-title">
             Эффективные решения<br />для вашего бизнеса
           </h1>
-          <button type="button" class="btn-hero" data-modal-open>
+          <button type="button" class="btn-hero button" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -515,12 +515,47 @@
             <use href="./images/icons.svg#icon-closed"></use>
           </svg>
         </button>
+
+        <p>Оставьте свои данные, мы вам перезвоним</p>
+        <form action="">
+          <ul>
+            <li>
+              <label for="name">Имя</label>
+              <input type="text" name="name" id="name" />
+            </li>
+            <li>
+              <label for="tel">Телефон</label>
+              <input type="tel" name="tel" id="tel" />
+            </li>
+            <li>
+              <label for="mail">Почта</label>
+              <input type="email" name="mail" id="mail" />
+            </li>
+            <li>
+              <label for="comment">Комментарий</label>
+              <textarea
+                name="comment"
+                id="comment"
+                rows="10"
+                placeholder="Введите текст"
+              ></textarea>
+            </li>
+            <li>
+              <input type="checkbox" name="policy" id="policy" />
+              <label for="policy"
+                >Соглашаюсь с рассылкой и принимаю Условия договора</label
+              >
+            </li>
+          </ul>
+
+          <button type="submit" class="btn-submit button">Отправить</button>
+        </form>
       </div>
     </div>
 
     <footer class="footer">
       <div class="container footer-container">
-        <div>
+        <div class="footer-adress">
           <a href="./index.html" class="logo link"
             >Web<span class="footer-logo">Studio</span></a
           >
@@ -600,6 +635,17 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer-subscribe">
+          <p class="footer-text">Подпишитесь на рассылку</p>
+          <label for="mail"></label>
+          <input type="email" name="mail" id="mail" placeholder="E-mail" />
+          <button type="submit" class="btn-subscribe button">
+            Подписаться
+            <svg class="btn-sub-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </footer>
