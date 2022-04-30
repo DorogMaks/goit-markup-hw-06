@@ -99,7 +99,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-legend">
+                <div class="portfolio-description">
                   <h2 class="portfolio-title">Технокряк</h2>
                   <p class="portfolio-text">Веб-сайт</p>
                 </div>
@@ -122,7 +122,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-legend">
+                <div class="portfolio-description">
                   <h2 class="portfolio-title">
                     Постер <span lang="en">New Orlean vs Golden Star</span>
                   </h2>
@@ -147,7 +147,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-legend">
+                <div class="portfolio-description">
                   <h2 class="portfolio-title">
                     Ресторан <span lang="en">Seafood</span>
                   </h2>
@@ -172,7 +172,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-legend">
+                <div class="portfolio-description">
                   <h2 class="portfolio-title">
                     Проект <span lang="en">Prime</span>
                   </h2>
@@ -197,7 +197,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-legend">
+                <div class="portfolio-description">
                   <h2 class="portfolio-title">
                     Проект <span lang="en">Boxes</span>
                   </h2>
@@ -222,7 +222,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-legend">
+                <div class="portfolio-description">
                   <h2 class="portfolio-title">
                     <span lang="en">Inspiration has no Borders</span>
                   </h2>
@@ -247,7 +247,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-legend">
+                <div class="portfolio-description">
                   <h2 class="portfolio-title">
                     Издание <span lang="en">Limited Edition</span>
                   </h2>
@@ -272,7 +272,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-legend">
+                <div class="portfolio-description">
                   <h2 class="portfolio-title">
                     Проект <span lang="en">LAB</span>
                   </h2>
@@ -297,7 +297,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="portfolio-legend">
+                <div class="portfolio-description">
                   <h2 class="portfolio-title">
                     <span lang="en">Growing Business</span>
                   </h2>
@@ -312,13 +312,13 @@
 
     <footer class="footer">
       <div class="container footer-container">
-        <div>
+        <div class="footer-adress">
           <a href="./index.html" class="logo link"
             >Web<span class="footer-logo">Studio</span></a
           >
           <address class="adress">
             <ul class="adress-list list">
-              <li class="adress-item">
+              <p class="adress-item">
                 <a
                   href="https://goo.gl/maps/VNFser5c9RtYqJdY7"
                   class="footer-address link"
@@ -326,7 +326,7 @@
                   rel="noreferrer noopener"
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
-              </li>
+              </p>
               <li class="adress-item">
                 <a href="mailto:info@example.com" class="footer-mail link"
                   >info@example.com</a
@@ -393,6 +393,18 @@
             </li>
           </ul>
         </div>
+        <form class="footer-subscribe">
+          <b class="footer-text subscribe-action">Подпишитесь на рассылку</b>
+          <label>
+            <input type="email" name="mail" placeholder="E-mail" />
+          </label>
+          <button type="submit" class="btn-subscribe button">
+            Подписаться
+            <svg class="btn-sub-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
   </body>

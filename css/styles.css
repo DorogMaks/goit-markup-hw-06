@@ -9,6 +9,7 @@
   --bg-team-color: #f5f4fa;
   --footer-adress-color: rgba(255, 255, 255, 0.6);
   --primary-icon-color: #afb1b8;
+  --time-function: time-function;
 }
 
 body {
@@ -64,6 +65,28 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
 }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 200px;
+  min-height: 50px;
+  border-radius: 4px;
+  border: none;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--btn-text-color);
+  background-color: var(--accent-color);
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: time-function;
+}
 
 /*---------- header ----------*/
 
@@ -111,7 +134,7 @@ img {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: time-function;
 }
 .header-link.current {
   color: var(--accent-color);
@@ -149,7 +172,7 @@ img {
 
   transition-property: color, fill;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: time-function;
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -200,28 +223,6 @@ img {
   letter-spacing: 0.06em;
   color: var(--hero-title-color);
   text-transform: uppercase;
-}
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 200px;
-  min-height: 50px;
-  border-radius: 4px;
-  border: none;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: var(--btn-text-color);
-  background-color: var(--accent-color);
-
-  transition-property: background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
@@ -323,7 +324,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-legend {
+.team-description {
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -366,7 +367,7 @@ img {
 
   transition-property: background-color, fill;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: time-function;
 }
 .team-soc-link:hover,
 .team-soc-link:focus {
@@ -397,7 +398,7 @@ img {
 
   transition-property: border-color, fill;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: time-function;
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -431,7 +432,7 @@ img {
 
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: time-function;
 }
 .btn:hover,
 .btn:focus {
@@ -454,7 +455,7 @@ img {
 
   transition-property: box-shadow;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: time-function;
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
@@ -492,7 +493,7 @@ img {
   transform: translateY(0);
 }
 
-.portfolio-legend {
+.portfolio-description {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
@@ -524,7 +525,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms time-function;
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -546,7 +547,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms time-function;
 }
 .btn-closed {
   position: absolute;
@@ -565,17 +566,19 @@ img {
 
   transition-property: fill;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: time-function;
 }
 .btn-closed:hover {
   cursor: pointer;
   fill: var(--accent-color);
 }
 
+/*---------- form ----------*/
+
 .form {
   padding: 40px;
 }
-.form-title {
+.form-action {
   margin-bottom: 12px;
 
   font-weight: 700;
@@ -583,7 +586,7 @@ img {
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--primary-text-color);
 }
 .form-field {
   position: relative;
@@ -593,71 +596,122 @@ img {
 
   margin-bottom: 10px;
 }
-.form-field label {
+.form-label {
   margin-bottom: 4px;
 
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: #757575;
+  color: var(--secondary-text-color);
 }
 .form-comment {
   margin-bottom: 20px;
 }
-.form-field input {
+.form-input {
   padding: 12px 16px 12px 42px;
+
+  font-size: 16px;
+  line-height: 1.13;
+  letter-spacing: 0.01em;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   transition-property: border-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: time-function;
 }
 .input-icon {
   position: absolute;
   bottom: 13px;
   left: 12px;
 
+  width: 18px;
+  height: 18px;
+
   transition-property: fill;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: time-function;
 }
-.form-field input:focus + .input-icon {
+.form-input:focus + .input-icon {
   fill: var(--accent-color);
 }
-.form-field textarea {
+.form-textarea {
   padding: 12px 16px;
 
   resize: none;
   width: 100%;
   height: 120px;
 
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   transition-property: border-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: time-function;
 }
-.form-field input:focus,
-.form-field textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
   outline: none;
   border: 1px solid #2196f3;
 }
-.form-field textarea::placeholder {
+.form-textarea::placeholder {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 .form-checkbox {
-  flex-direction: row;
-
+  align-items: center;
   margin-bottom: 30px;
 }
-.checkbox-policy {
-  margin-left: 8px;
+.checkbox-lable {
+  position: relative;
+
+  padding-left: 24px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+.checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  width: 16px;
+  height: 15px;
+}
+.icon-check {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: time-function;
+}
+.icon-checkin {
+  opacity: 0;
+  transform: translateY(-50%) scale(0.6);
+
+  transition-property: opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: time-function;
+}
+.checkbox-input:checked ~ .icon-checkin {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+.checkbox-input:checked ~ .icon-check {
+  fill: var(--accent-color);
+}
+
+.agreement-conditions {
+  color: var(--accent-color);
 }
 .btn-submit {
   display: block;
@@ -731,7 +785,7 @@ img {
 
   transition-property: background-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: time-function;
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
@@ -740,7 +794,7 @@ img {
 .footer-subscribe {
   margin-left: auto;
 }
-.subscribe-title {
+.subscribe-action {
   display: block;
 }
 .footer-subscribe input {
