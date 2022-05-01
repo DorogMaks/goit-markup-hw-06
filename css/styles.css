@@ -9,7 +9,7 @@
   --bg-team-color: #f5f4fa;
   --footer-adress-color: rgba(255, 255, 255, 0.6);
   --primary-icon-color: #afb1b8;
-  --time-function: time-function;
+  --time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -85,7 +85,7 @@ img {
 
   transition-property: background-color, box-shadow;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 
 /*---------- header ----------*/
@@ -134,7 +134,7 @@ img {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .header-link.current {
   color: var(--accent-color);
@@ -172,7 +172,7 @@ img {
 
   transition-property: color, fill;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -367,7 +367,7 @@ img {
 
   transition-property: background-color, fill;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .team-soc-link:hover,
 .team-soc-link:focus {
@@ -398,7 +398,7 @@ img {
 
   transition-property: border-color, fill;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -432,7 +432,7 @@ img {
 
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .btn:hover,
 .btn:focus {
@@ -455,7 +455,7 @@ img {
 
   transition-property: box-shadow;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
@@ -525,7 +525,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 250ms time-function;
+  transition: opacity 250ms var(--time-function);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -547,7 +547,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms time-function;
+  transition: transform 250ms var(--time-function);
 }
 .btn-closed {
   position: absolute;
@@ -566,7 +566,7 @@ img {
 
   transition-property: fill;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .btn-closed:hover {
   cursor: pointer;
@@ -619,7 +619,7 @@ img {
 
   transition-property: border-color;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .input-icon {
   position: absolute;
@@ -631,7 +631,7 @@ img {
 
   transition-property: fill;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .form-input:focus + .input-icon {
   fill: var(--accent-color);
@@ -652,7 +652,7 @@ img {
 
   transition-property: border-color;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .form-input:focus,
 .form-textarea:focus {
@@ -692,15 +692,15 @@ img {
 .icon-check {
   transition-property: fill;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .icon-checkin {
   opacity: 0;
-  transform: translateY(-50%) scale(0.6);
+  transform: translateY(-50%) scale(1.5);
 
   transition-property: opacity, transform;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .checkbox-input:checked ~ .icon-checkin {
   opacity: 1;
@@ -785,7 +785,7 @@ img {
 
   transition-property: background-color;
   transition-duration: 250ms;
-  transition-timing-function: time-function;
+  transition-timing-function: var(--time-function);
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
